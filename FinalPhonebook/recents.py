@@ -3,8 +3,10 @@ from tkinter import messagebox
 import sqlite3
 from PIL import ImageTk,Image
 
-con=sqlite3.connect('recents_backup2.db')
+con=sqlite3.connect('myrecents.db')
 cur=con.cursor()
+cur.execute(
+    "CREATE TABLE IF NOT EXISTS recents (number_id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, number INTEGER, day TEXT, time INTEGER)")
 
 class Recents(Toplevel):
     def __init__(self):

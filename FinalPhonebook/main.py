@@ -32,26 +32,20 @@ class Application(object):
         self.date_lbl=Label(self.top,text="Today's Date: "+date,font='arial 12 bold',bg='white',fg='#eb8034')
         self.date_lbl.place(x=450,y=120)
         
-        self.viewbutton=Button(self.bottom,text='My Contacts',font='arial 15 bold',fg='#4b42f5',command=self.my_contacts)
-        self.viewbutton.place(x=365,y=70)
+        self.viewbutton=Button(self.bottom,text='My Contacts',font='arial 18 bold',fg='#4b42f5',command=self.my_contacts)
+        self.viewbutton.place(x=365,y=100)
         
-        self.addbutton=Button(self.bottom,text=' Add Contact',font='arial 15 bold',fg='#4b42f5',command=self.addcontactsfunction)
-        self.addbutton.place(x=365,y=140)
+        self.aboutbutton=Button(self.bottom,text='   About Us  ',font='arial 18 bold',fg='#4b42f5',command=self.about_us)
+        self.aboutbutton.place(x=365,y=210)
         
-        self.aboutbutton=Button(self.bottom,text='   About Us  ',font='arial 15 bold',fg='#4b42f5',command=self.about_us)
-        self.aboutbutton.place(x=265,y=210)
+        self.keypadbutton=Button(self.bottom,text='    Keypad   ',font='arial 18 bold',fg='#4b42f5',command=self.keypad)
+        self.keypadbutton.place(x=160,y=100)
         
-        self.keypadbutton=Button(self.bottom,text='    Keypad   ',font='arial 15 bold',fg='#4b42f5',command=self.keypad)
-        self.keypadbutton.place(x=160,y=70)
-        
-        self.recentsbutton=Button(self.bottom,text='    Recents  ',font='arial 15 bold',fg='#4b42f5',command=self.recents)
-        self.recentsbutton.place(x=160,y=140)
+        self.recentsbutton=Button(self.bottom,text='    Recents  ',font='arial 18 bold',fg='#4b42f5',command=self.recents)
+        self.recentsbutton.place(x=160,y=210)
         
     def my_contacts(self):
         people=MyContacts()
-        
-    def addcontactsfunction(self):
-        addpeoplewindow=AddContacts()
         
     def about_us(self):
         aboutpage=About()

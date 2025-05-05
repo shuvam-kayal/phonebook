@@ -10,8 +10,10 @@ time=tm.strftime('%H:%M:%S')
 
 day=datetime.today().strftime('%A')
 
-con=sqlite3.connect('recents_backup2.db')
+con=sqlite3.connect('myrecents.db')
 cur=con.cursor()
+cur.execute(
+    "CREATE TABLE IF NOT EXISTS recents (number_id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, number INTEGER, day TEXT, time INTEGER)")
 
 class MyKeypad(Toplevel):
     def __init__(self):
